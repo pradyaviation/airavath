@@ -287,9 +287,20 @@ const FooterSection = () => {
             ))}
 
             {/* Bottom bar */}
-            <div className="mt-6 flex items-center justify-between">
+            <div className="mt-6 flex flex-col gap-1.5">
               <p className="font-body text-[11px] text-[#BFC4C9]/50">
                 © 2026 AIRAVATH
+              </p>
+              <p className="font-body text-[11px] text-[#BFC4C9]/50">
+                Designed and developed by{" "}
+                <a
+                  href="https://www.thedreamteamservices.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#BFC4C9]/70 hover:text-primary transition-colors duration-300"
+                >
+                  Dream Team Services
+                </a>
               </p>
             </div>
           </div>
@@ -382,12 +393,23 @@ const FooterSection = () => {
         {/* Desktop bottom bar */}
         {!isMobile && (
           <motion.div
-            className="border-t border-white/[0.08] py-6 flex items-center justify-center"
+            className="border-t border-white/[0.08] py-6 flex items-center justify-between"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.7 }}
           >
             <p className="font-body text-[12px] text-[#BFC4C9]/60">© 2026 AIRAVATH. All rights reserved.</p>
+            <p className="font-body text-[12px] text-[#BFC4C9]/60">
+              Designed and developed by{" "}
+              <a
+                href="https://www.thedreamteamservices.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#BFC4C9]/80 hover:text-primary transition-colors duration-300"
+              >
+                Dream Team Services
+              </a>
+            </p>
           </motion.div>
         )}
       </div>
